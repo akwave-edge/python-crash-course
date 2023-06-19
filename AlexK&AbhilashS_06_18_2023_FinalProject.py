@@ -100,6 +100,11 @@ elif user_input == "2":
       print("c) settings - Change User Password")
       print("d) settings - Change User PIN")
       print("e) settings - Deactivate User Account")
+      print("f) View Statements - All")
+      print("g) View Statements - Monthly")
+      print("h) Compare Statements")
+      print("K) View Quarterly Reports")
+      print("L) GEO Investements Fee")
       print("------------------------------------------------")
       user_input2 = input(
         "\nEnter a number option and press ENTER or type 'Q/q' to quit:")
@@ -192,6 +197,112 @@ elif user_input == "2":
         print("\nAccount of " + full_nm +
               " deactivated and profile deleted successfully!")
         os.remove("user accounts " + usr_name + ".txt")
+
+  #View All statements
+      elif user_input2.upper() == "F":
+        statements = {'Transactions made' : '14','Total Gained' : '9900', 'Total Lost' : '4400'}
+        print(statements)
+
+  #View Monthly statements
+      elif user_input2.upper() == "G":
+        user_input_mth = input("\nEnter which month's statement to be viewed: [JAN/FEB/MAR etc]")
+        if user_input_mth.upper() == "JAN":
+          january = {'Total gained' : '500' , 'Total Lost' : '300' , 'Total transactions' : '2'} 
+          print("Monthly Statement for JAN: ", january)
+        elif user_input_mth.upper() == "FEB":
+          february = {'Total gained' : '2000' ,'Total Lost' : '200', 'Total Transactions' : '3'}
+          print("Monthly Statement for FEB: ", february)
+        elif user_input_mth.upper() == "MAR":
+          march = {'Total gained' : '400' , 'Total lost' : '500', 'Total Transactions' : '1'}
+          print("Monthly Statement for MAR: ", march)
+        elif  user_input_mth.upper() == "APR":
+          april = {'Total gained' : '1000', 'Total lost' : '450', 'Total Transactions' : '4'}
+          print("Monthly Statement for MAR: ", april)
+        elif user_input_mth.upper() == "MAY":
+          may =  {'Total gained' : '600' , 'Total lost' : '250' , 'Total Transactions' : '2'}
+          print("Monthly Statement for MAY: ", may)
+        elif user_input_mth.upper() == "JUN":
+          june = {'Total gained' : '700' , 'Total lost' : '300', 'Total Transactions' : '4'}
+          print("Monthly Statement for JUN: ", june)
+        elif user_input_mth.upper() == "JUL":
+          july = {'Total gained' : '890' , 'Total lost' : '460', 'Total Transactions' : '5'}
+          print("Monthly Statement for JUL: ", july)
+        elif user_input_mth.upper() == "AUG":
+          august = {'Total gained' : '580', 'Total lost' : '400', 'Total Transactions' : '6'}
+          print("Monthly Statement for AUG: ", august)
+        elif user_input_mth.upper() == "SEP":
+          september = {'Total gained' : '1000', 'Total lost' : '100', 'Total Transactions' : '2'}
+          print("Monthly Statement for SEP: ", september)
+        elif user_input_mth.upper() == "OCT":
+          october = {'Total gained' : '1200', 'Total lost' : '610', 'Total Transactions' : '3'} 
+          print("Monthly Statement for OCT: ", october)
+        elif user_input_mth.upper() == "NOV":
+          november = {'Total gained' : '940', 'Total lost' : '500', 'Total Transactions' : '4'}
+          print("Monthly Statement for NOV: ", november)
+        elif user_input_mth.upper() == "DEC":
+          december = {'Total gained' : '730', 'Total lost' : '280', 'Total Transactions' : '2'}
+          print("Monthly Statement for DEC: ", december)
+
+      #Statement comparison
+      elif user_input2.upper() == "H":
+        user_input_mth = input("\nEnter which month's statement to be compared: [JAN/FEB/MAR etc]")
+        if user_input_mth.upper() == "JAN":
+          january = {'Total gained' : '500' , 'Total Lost' : '300' , 'Total transactions' : '2'} 
+          print("Monthly Statement for JAN: ", january)
+        elif user_input_mth.upper() == "FEB":
+          february = {'Total gained' : '2000' ,'Total Lost' : '200', 'Total Transactions' : '3'}
+          print("Monthly Statement for FEB: ", february)
+        elif user_input_mth.upper() == "MAR":
+          march = {'Total gained' : '400' , 'Total lost' : '500', 'Total Transactions' : '1'}
+          print("Monthly Statement for MAR: ", march)
+        elif  user_input_mth.upper() == "APR":
+          april = {'Total gained' : '1000', 'Total lost' : '450', 'Total Transactions' : '4'}
+          print("Monthly Statement for MAR: ", april)
+        elif user_input_mth.upper() == "MAY":
+          may =  {'Total gained' : '600' , 'Total lost' : '250' , 'Total Transactions' : '2'}
+          print("Monthly Statement for MAY: ", may)
+        elif user_input_mth.upper() == "JUN":
+          june = {'Total gained' : '700' , 'Total lost' : '300', 'Total Transactions' : '4'}
+          print("Monthly Statement for JUN: ", june)
+        elif user_input_mth.upper() == "JUL":
+          july = {'Total gained' : '890' , 'Total lost' : '460', 'Total Transactions' : '5'}
+          print("Monthly Statement for JUL: ", july)
+        elif user_input_mth.upper() == "AUG":
+          august = {'Total gained' : '580', 'Total lost' : '400', 'Total Transactions' : '6'}
+          print("Monthly Statement for AUG: ", august)
+        elif user_input_mth.upper() == "SEP":
+          september = {'Total gained' : '1000', 'Total lost' : '100', 'Total Transactions' : '2'}
+          print("Monthly Statement for SEP: ", september)
+        elif user_input_mth.upper() == "OCT":
+          october = {'Total gained' : '1200', 'Total lost' : '610', 'Total Transactions' : '3'} 
+          print("Monthly Statement for OCT: ", october)
+        elif user_input_mth.upper() == "NOV":
+          november = {'Total gained' : '940', 'Total lost' : '500', 'Total Transactions' : '4'}
+          print("Monthly Statement for NOV: ", november)
+        elif user_input_mth.upper() == "DEC":
+          december = {'Total gained' : '730', 'Total lost' : '280', 'Total Transactions' : '2'}
+          print("Monthly Statement for DEC: ", december)
+
+      #Quarterly statements
+      elif user_input2.upper() == "K":
+        user_input_mth = input("\nEnter which Quarter statement to be viewed (Q1/Q2/Q3/Q4): ") 
+        if user_input_mth.upper() == "Q1":
+          print("Q1 Report: Total gained: 2900, Total lost: 1000")
+        elif user_input_mth.upper() == "Q2":
+          print("Q2 Report: Total gained: 2300, Total lost: 1000")
+        elif user_input_mth.upper() == "Q3":
+          print("Q3 Report: Total gained: 2470, Total lost: 960")
+        elif user_input_mth.upper() == "Q4":
+          print("Q4 Report: Total gained: 2870, Total lost: 1390")
+
+      #GEO Investment
+      elif user_input2.upper() == "L":
+        user_input = input("Please press K to pay GEO Investment fee of $10 : ")
+        if user_input.upper() == "K":
+          print("GEO investment fee succesfully paid")
+        else:
+          print("GEO Investment payment transaction failed")
+        
   #Quit settings menu
       elif user_input2.upper() == "Q":
         print("\nGood Bye!")
@@ -206,122 +317,3 @@ elif user_input.upper() == "Q":
 #Invalid option entered
 else:
   print("\nPlease try again with a valid option!")
-
-#Lists of statements
-statements = {'Transactions made' : '14','Total Gained' : '9900', 'Total Lost' : '4400'}
-
-#Statements for each month
-january = {'Total gained' : '500' , 'Total Lost' : '300' , 'Total transactions' : '2'}  
-february = {'Total gained' : '2000' ,'Total Lost' : '200', 'Total Transactions' : '3'}
-march = {'Total gained' : '400' , 'Total lost' : '500', 'Total Transactions' : '1'}
-april = {'Total gained' : '1000', 'Total lost' : '450', 'Total Transactions' : '4'}
-may =  {'Total gained' : '600' , 'Total lost' : '250' , 'Total Transactions' : '2'}
-june = {'Total gained' : '700' , 'Total lost' : '300', 'Total Transactions' : '4'}
-july = {'Total gained' : '890' , 'Total lost' : '460', 'Total Transactions' : '5'}
-august = {'Total gained' : '580', 'Total lost' : '400', 'Total Transactions' : '6'}
-september = {'Total gained' : '1000', 'Total lost' : '100', 'Total Transactions' : '2'}
-october = {'Total gained' : '1200', 'Total lost' : '610', 'Total Transactions' : '3'} 
-november = {'Total gained' : '940', 'Total lost' : '500', 'Total Transactions' : '4'}
-december = {'Total gained' : '730', 'Total lost' : '280', 'Total Transactions' : '2'}
-#View Statements
-print("Press S to view the list of transactions made in account")
-print("Press J to view January statements ")
-print("Press F to view February statements ")
-print("Press M to view March statements ")
-print("Press A to view Aril statements ")
-print("Press Y to view May statements ")
-print('Press U to view June statements')
-print('Press L to view July statements')
-print('Press G to view August statements')
-print('Press T to view September statements')
-print('Press O to view October statements')
-print('Press N to view November statements')
-print('Press D to view December statements')
-
-#Now letting the user view a statement
-user_input = input("Enter option here: ")
-
-if user_input == "J":
-  print(january)
-elif user_input == "F":
-  print (february)
-elif user_input == "M":
-  print(march)
-elif user_input == "A":
-  print(april)
-elif user_input == "Y":
-  print(may)
-elif user_input == "U":
-  print(june)
-elif user_input == "L":
-  print(july)
-elif user_input == "G":
-  print(august)
-elif user_input == "T":
-  print(september)
-elif user_input == "O":
-  print(october)
-elif user_input == "N":
-  print(november)
-elif user_input == "D":
-  print(december)
-elif user_input == "S":
-  print(statements)
-else:
-  print("An error has occured due to violation of instructions")
-
-#Now the users have the option to compare that income/outcome with another month. This is optional.
-print("Press another key associated with another month if you want to compare that last selected month with another one. /n Press a non-assciated key to skip this.")
-user_input = input("Enter what month to compare to: ")
-
-if user_input == "J":
-  print(january)
-elif user_input == "F":
-  print (february)
-elif user_input == "M":
-  print(march)
-elif user_input == "A":
-  print(april)
-elif user_input == "Y":
-  print(may)
-elif user_input == "U":
-  print(june)
-elif user_input == "L":
-  print(july)
-elif user_input == "G":
-  print(august)
-elif user_input == "T":
-  print(september)
-elif user_input == "O":
-  print(october)
-elif user_input == "N":
-  print(november)
-elif user_input == "D":
-  print(december)
-elif user_input == "S":
-  print(statements)
-else:
-  print("You have skipped this step")
-
-#Get quarterly reports
-print("Press 1 to get first quarter report")
-print("Press 2 to get second quarter report")
-print("Press 3 to get third quarter report")
-print("Press 4 to get forth quarter report")
-user_input = input("Enter option here: ")
-if user_input == "1":
-  print("Total gained: 2900, Total lost: 1000")
-elif user_input == "2":
-  print("Total gained: 2300, Total lost: 1000")
-elif user_input == "3":
-  print("Total gained: 2470, Total lost: 960")
-elif user_input == "4":
-  print("Total gained: 2870, Total lost: 1390")
-
-#GEO Investment
-print("GEO Investment fee: $10 ")
-user_input = input("Please press K to pay GEO Investment fee: ")
-if user_input == "K":
-  print("GEO investment fee succesfully paid")
-else:
-  print("GEO Investment payment transaction failed")
